@@ -1,0 +1,23 @@
+<div id="monthlyExpenses">
+	<div ng-repeat="consume in bindTo" class="consume">
+		<div ng-class="{'negative' : !consume.isCredit}" 
+			 ng-repeat="balance in consume.balances"
+			 ng-if="params.defaultCurrency == balance.currency">
+			<div class="row" >
+				<div class="dateBox col col-center">
+					<p class="text-center" ng-style="commonText"> {{params.translateDay(params.pickWeekday(consume.date.isoDate)) | uppercase }} </p>
+					<h3 class="text-center bold"> {{params.pickDay(consume.date.isoDate)}} </h3>
+				</div>
+				<div class="col-33 col-center">
+					<h6 class="truncate"> {{::consume.description}} </h6>
+					<p class="truncate" ng-style="commonText"> {{::consume.reference}} </p>
+				</div>
+				<p class="col-center col-50 text-right amount" ng-style="accountAmount">
+					<span>{{::balance.displayAmount | limitTo : 2}}.</span>
+                    {{::balance.displayAmount | limitTo : 42 : 3}}
+				 </p>
+			</div>
+		</div>
+		<hr ng-if="$index < bindTo.length -1" />
+	</div>
+</div>

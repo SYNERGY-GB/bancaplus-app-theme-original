@@ -1,0 +1,19 @@
+.dashboard { 
+	button.langIcon { 
+		padding: 20px;  
+		span {
+			display:inline; 
+		}
+		color: $header-title-color; 
+		font-size: $dashboard-header-lang-size; 
+	}
+
+	// Float lang selection to right
+	.button.button-icon {
+		float: right; 
+	}
+
+	.button-opaque{
+		opacity: $dashboard-button-opacity;
+	}	
+}

@@ -1,0 +1,27 @@
+.appMenu .summary {
+
+	#welcomeMsg p {
+		margin-bottom:0; 
+		color: $main-blue;
+	}
+
+	.mainContainer {
+		padding-left:$financial-main-container-side-padding;
+		padding-right:$financial-main-container-side-padding; 
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+
+	.totalAmount {
+		font-weight: bold;
+	}
+
+	.sectionTitle {
+		padding:5px; 
+		h3 {
+			margin:0; 
+		}
+	}
+}

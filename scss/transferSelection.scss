@@ -1,0 +1,38 @@
+.appMenu .transferSelection {
+
+	.item {
+		border: 0;
+		margin: 0; 
+	}
+
+	h4 {
+		color: $tertiary-blue;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 16px;
+	}
+
+	.sectionTitle.item.item-divider {
+		background-color: $main-blue !important; 
+	}
+
+	.secondaryContainer, .item {
+		//border: 0; 
+	}
+
+	.item-checkbox .checkbox {
+		padding-right:5px; 
+	}
+
+	.item-icon-left .row, .item-icon-left .col, .item-checkbox .row, .item-checkbox .col {
+		padding: 0;
+	}
+
+	.item h3 {
+    	white-space: normal;
+    }
+
+	button {
+		margin-bottom:20px; 
+	}
+}

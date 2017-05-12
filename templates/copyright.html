@@ -1,0 +1,19 @@
+<ion-modal-view>
+	<div class="mainContainer">
+		<h3 class="sectionTitle bold" ng-style="sectionTitle">{{'about' | translate}}</h3>
+		<div class="secondaryContainer" ng-style="secondaryContainer">
+			<div class="text-center padding" id="copyright"> 
+				<p ng-style="commonText">{{'version' | translate}}: {{appVersion}}</p>
+				<p ng-style="commonText">{{ params.bankName }}</p>
+				<p ng-style="commonText">{{'Rif' | translate}}: {{params.bankRif}} &copy {{year}}</p>
+				<p ng-style="commonText">{{'all_rights_reserved' | translate}}</p>
+				<p ng-style="commonText" class="app-name">{{'app_name' | translate}} &copy {{year}}</p>
+				<img ng-src="{{_screenParams.companyResource}}" width="120"/>
+			</div>
+			<hr/>
+			<button class="button button-full" id="copyrightButton" data-ng-click="modal.hide()" ng-style="button"> 
+	        	<p ng-style="buttonText">{{'accept' | translate}}</p>
+	    	</button>
+		</div>
+	</div>
+</ion-modal-view> 

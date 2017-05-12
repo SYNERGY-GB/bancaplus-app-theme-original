@@ -1,0 +1,12 @@
+.platform-ios.platform-cordova:not(.fullscreen) .menu-content .bar-header:not(.bar-subheader) > * {
+	margin-top: 10px; 
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .menu-content .bar-header:not(.bar-subheader) {
+	height: 54px; 
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) ion-side-menu.menu .bar-header:not(.bar-subheader) {
+	height: 64px; 
+}
+

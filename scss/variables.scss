@@ -1,0 +1,153 @@
+//Ionicons font path
+$ionicons-font-path: 'lib/ionic/release/fonts';
+
+//Main Colors
+$main-blue: #142E53;
+$secondary-blue: #587088;
+$tertiary-blue: #57C5D1;
+$main-white: #F2F2F2;
+$activated-gray: #ADADAD;
+
+//App header dashboard
+ 
+$dashboard-header-lang-size: 12px; 
+$dashboard-button-opacity: 0.3; 
+
+//Dashboard screen
+
+$dashboard-background: 'resources/7_BG/componente-70.png'; 
+$dashboard-item-width: 90vw; 
+$dashboard-item-title-color:$main-blue; 
+$dashboard-item-paragraph-size: 18px; 
+$dashboard-item-font-color:$main-blue; 
+$dashboard-logo-padding: 20px 25px 0px 45px;
+$dashboard-item-background: 'resources/4_Others/componente-45.svg'; 
+
+$tutorial-pane-background-color: $main-blue;
+//$tutorial-pane-background-color1: rgba(8,8,95,1);
+//$tutorial-pane-background-color2: -moz-linear-gradient(top, rgba(8,8,95,1) 0%, rgba(58,139,246,1) 100%);
+//$tutorial-pane-background-color3: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8,8,95,1)), color-stop(100%, rgba(58,139,246,1)));
+//$tutorial-pane-background-color4: -webkit-linear-gradient(top, rgba(8,8,95,1) 0%, rgba(58,139,246,1) 100%);
+//$tutorial-pane-background-color5: -o-linear-gradient(top, rgba(8,8,95,1) 0%, rgba(58,139,246,1) 100%);
+//$tutorial-pane-background-color6: -ms-linear-gradient(top, rgba(8,8,95,1) 0%, rgba(58,139,246,1) 100%);
+//$tutorial-pane-background-color7: linear-gradient(to bottom, rgba(8,8,95,1) 0%, rgba(58,139,246,1) 100%);
+$tutorial-pager-icon-color: white;
+
+//Contact screen
+ 
+$contact-title-color:$main-blue;
+
+//Login screen
+
+$login-background: 'resources/7_BG/componente-71.png';
+$login-box-margin: 20px; 
+$login-box-position-top: 4vh; 
+$login-box-background: rgba(255, 255, 255, 0.5);
+$login-logo-padding: 20px 25px 20px 45px; 
+
+//Headers
+$header-color:$main-blue;
+$header-title-color: white;
+
+//Side Menu
+
+$menu-selected-border-width: 6px; 
+$menu-backdrop-color: rgba(0, 0, 0, 0.4);
+$menu-header-font-color: white; 
+$menu-internal-header-font-color: white; 
+$menu-internal-header-color:$main-blue;
+$menu-internal-header-title-color: white; 
+$menu-option-background-color: white;
+$menu-option-padding: 5px; 
+$menu-option-separator-margin: 15px; 
+$menu-option-color: #373836; 
+$menu-option-height: 50px; 
+
+//Financial Summary screen
+
+$financial-main-container-side-padding: 8px; 
+$financial-amount-color: $main-blue; 
+
+//Instrument detail screen
+
+$instrument-subheader-padding:  10px 12px 0 12px;
+$instrument-selectbox-padding: 5px 10px 5px 10px; 
+$instrument-progress-margin: 0 15px 0 15px; 
+$instrument-progress-color0: $secondary-blue; 
+$instrument-progress-color1: #E2DBDB; 
+$instrument-date-padding: 20px 15px 12px 15px; 
+$instrument-row-balance-padding: 0 15px 0 15px;
+$instrument-negative-color: #B3272D; 
+$instrument-positive-color: $main-blue; 
+
+//Calendar Screen 
+
+$calendar-last-payment: 'resources/1_Icons/componente-22.svg';
+$calendar-next-payment: 'resources/1_Icons/componente-23.svg';
+$calendar-today: 'resources/1_Icons/componente-20.svg';
+$calendar-date-background: #A5CE39; 
+//$calendar-container-background: rgba(255, 255, 255, 0.8);
+$calendar-container-background: white;
+
+//Common CSS
+
+$container-round-corner: 0; 
+$main-container-padding: 5px 12px; 
+$main-container-margin-top: 10px; 
+$container-border-color: #E2DBDB; 
+
+//$secondary-container-background-color: rgba(255, 255, 255, 0.8);
+$secondary-container-background-color: #fff; 
+$secondary-container-item-background-color: rgba(255, 255, 255, 0);  
+
+$modal-button-text-color: $secondary-blue;
+
+$section-title-background-color:$secondary-blue; 
+$section-title-font-size: 18px; 
+$section-title-font-color: white;
+$section-title-icon-size: 16px;
+$section-title-modal-icon-size:21px;   
+
+$app-default-font-color: #4f4f4f;
+$app-default-font-family: Helvetica, sans-serif; 
+$h2-default-size: 20px; 
+$h4-span-color: #32843F; 
+$h4-span-size: 15px; 
+$h4-currency-color: #565957; 
+$h4-currency-size: 10px; 
+$app-default-select-background:$main-blue; 
+//$app-default-item-background: rgba(255, 255, 255,0.8);
+$app-default-item-background: #fff;
+$app-default-item-h3-size: 18px; 
+$app-default-item-h2-size: 20px; 
+$app-default-separator-color: #DFDFEC; 
+$app-default-separator-margin: 0 10px;
+$app-default-spinner-color: #D9DEE4; 
+$app-default-spinner-size: 50px; 
+$app-default-select-text-color: white; 
+$app-default-modal-background: white;
+$app-default-background-color: $main-white; 
+$app-default-button-color: $tertiary-blue;  
+$app-default-button-activated-color: $activated-gray;  
+$app-default-backdrop-color: rgba(0, 0, 0, 0.65); 
+$app-default-header-icon-size: 20px;  
+$app-default-button-text-size: 18px; 
+
+$list-divider-color: #f5f5f5; 
+$list-confirm-text-size: 17px; 
+
+//App button
+$button-round-corner: 0; 
+$input-height: 50px;   
+$input-border-color: #C5CEC7;
+$text-color: #565A57; 
+$button-text-color: white; 
+
+$icon-color: $tertiary-blue;
+$icon-size: 16px; 
+
+$placeholder-color: gray !important; 
+
+$popover-hr-color: #387EF5;
+$popup-activated-color: $activated-gray; 
+$instrument-activated-color: $activated-gray; 

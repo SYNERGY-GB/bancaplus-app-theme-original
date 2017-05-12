@@ -1,0 +1,19 @@
+.appMenu .transferAmount {
+
+	.schemaForm form {
+	 	.item {
+	 		box-shadow: none; 
+			border:0;
+			&.item-input, &.item-select {
+				border-bottom: 1px solid rgb(221, 221, 221);
+			}
+			&.item-radio .radio-content .item-content {
+				padding-left:1px; 
+			}
+		}
+		.list {
+		    position: relative;
+   		 	right: 2px;
+		}
+	}
+}

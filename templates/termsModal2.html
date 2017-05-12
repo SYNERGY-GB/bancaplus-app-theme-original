@@ -1,0 +1,19 @@
+<ion-modal-view>
+	<div class="item item-icon-right sectionTitle" ng-style="sectionTitle">
+		<h3 class="text-center" ng-style="sectionTitleText">{{'terms_and_conditions' | translate}}</h3>
+	</div>
+	<div class="secondaryContainer" ng-style="secondaryContainer">
+		<ion-scroll direction="y" class="scroll-size">
+		    <div class="text-justify padding" ng-bind-html="terms"></div>
+		</ion-scroll>
+		<ion-checkbox ng-if="!disableCheckbox" class="item-checkbox" ng-model="user.acceptTerms">
+			{{'accept_terms' | translate}} 
+		</ion-checkbox>
+		<hr ng-if="!disableCheckbox" />
+		<div class="text-center">
+	    <button class="button button-full" id="copyrightButton" ng-disabled="!disableCheckbox && !user.acceptTerms" ng-click="close()" ng-style="button">
+	     <p ng-style="buttonText">{{'close' | translate}}</p>
+	    </button>
+		</div>
+	</div>
+</ion-modal-view> 

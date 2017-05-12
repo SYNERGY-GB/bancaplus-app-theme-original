@@ -1,0 +1,21 @@
+<ion-modal-view class="mechanism" id="otpModal">
+	<div class="mainContainer">
+		<h3 class="sectionTitle">{{'otp_key' | translate}}</h3>
+		<div class="secondaryContainer">
+			<p class="text-center padding" >{{'otp_instruction' | translate}}</p> 
+			<div id="inputContainer">
+				<input type="tel"  ng-model="otpInput['firstCoordinate']" name="firstCoordinate" required/> 
+			</div>
+			<div class="row">
+				<button class="col button app-input" data-ng-click="cancelAuth()"> 
+		        	{{'cancel' | translate}}
+		    	</button>
+		    	<button class="col button app-input" 
+		    			data-ng-click="attemptMechanism('token')"
+		    			ng-disabled="!otpInput['firstCoordinate']"> 
+		        	{{'accept' | translate}}
+		    	</button>
+		    </div>
+		</div>
+	</div>
+</ion-modal-view> 

@@ -1,0 +1,15 @@
+<ion-popover-view class="shortAnimated zoomIn">
+	<ion-content>
+		<div class="item item-icon-right sectionTitle">
+			<i class="icon ion-close-round" ng-click="popover.hide()" ng-style="defaultColor"></i> 
+    		<h3 class="text-center"> {{'options' | translate}} </h3>
+		</div>
+		<div ng-repeat="option in instrumentOptions" id="option">
+			<div class="row" ng-click="option.action(instrumentClicked)" ng-disabled="!option.action">
+				<img class="col col-20" ng-src="{{option.icon}}"/>
+				<span class="col col-center"> {{option.text}} </span>
+			</div>
+			<hr ng-if="$index<instrumentOptions.length-1"/>
+		</div>
+	</ion-content>
+</ion-popover-view>

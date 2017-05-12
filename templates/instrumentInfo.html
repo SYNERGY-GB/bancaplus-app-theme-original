@@ -1,0 +1,102 @@
+<!-- if has order-->
+<div ng-repeat="item in bindTo.order" ng-if="bindTo.order && bindTo.order.length>0">
+		<div ng-if="item=='balance'" >
+				<div ng-repeat="balance in bindTo.balance" ng-if="bindTo.balance && bindTo.balance.length>0">
+					<div class="row" ng-if="balance.currency == params.defaultCurrency"> 
+						<div class="col col-center" id="balanceLabel">
+							<h4 ng-if="balance.displayName" ng-style="commonText"> {{::balance.displayName}} </h4>
+							<h4 ng-if="!balance.displayName" ng-style="commonText"> {{'current_balance' | translate}} </h4>
+						</div>
+						<h4 class="text-right col col-center amount" ng-style="accountAmount">
+							<span ng-style="accountAmount">{{::balance.displayAmount | limitTo : 2}}.</span>
+							{{::balance.displayAmount | limitTo : 42 : 3}}
+						</h4>
+					</div>
+				</div>
+		</div>
+		<div ng-if="item=='available'" >
+				<div ng-repeat="available in bindTo.available" ng-if="bindTo.available && bindTo.available.length>0">
+					<div class="row" ng-if="available.currency == params.defaultCurrency"> 
+						<div class="col col-center" id="balanceLabel">
+							<h4 ng-if="available.displayName" ng-style="commonText"> {{::available.displayName}} </h4>
+							<h4 ng-if="!available.displayName" ng-style="commonText"> {{'available_balance' | translate}} </h4>
+						</div>
+						<h4 class="col col-center amount text-right" ng-style="accountAmount">
+							<span ng-style="accountAmount">{{::available.displayAmount | limitTo : 2}}.</span>
+							{{::available.displayAmount | limitTo : 42 : 3}} 
+						</h4>
+					</div>
+				</div>
+		</div>
+		<div ng-if="!(bindTo[item]) && !(item=='balance') && !(item=='available')" >
+				<div ng-repeat="extra in bindTo.extraProperties" ng-if="extra.id==item">
+					<div class="row" 
+							 ng-if="extra.propertyType=='balance' || extra.propertyType == 'date' || extra.propertyType == 'string'"> 
+						<div class="col col-center" id="balanceLabel">
+							<h4 ng-if="extra.propertyType=='balance'" ng-style="commonText"> {{::extra.balanceValue[0].displayName}} </h4>
+							<h4 ng-if="extra.propertyType=='string' || extra.propertyType=='date'" ng-style="commonText">{{::extra.displayName}}</h4>
+						</div>
+						<h4 class="col col-center amount text-right" ng-if="extra.propertyType=='balance'" ng-style="accountAmount">
+						 	<span ng-style="accountAmount">{{::extra.balanceValue[0].displayAmount | limitTo : 2}}.</span>
+							{{::extra.balanceValue[0].displayAmount | limitTo : 42 : 3}}
+						</h4>
+						<h4 class="col col-center amount text-right" ng-if="extra.propertyType == 'date'" ng-style="accountAmount"> 
+							{{::extra.dateValue.displayDate | date:"dd/MM/yyyy"}} 
+						</h4>
+						<h4 class="col col-center amount text-right" ng-if="extra.propertyType == 'string'" ng-style="accountAmount"> 
+							{{::extra.stringValue}} 
+						</h4>
+					</div>	
+				</div>
+		</div>
+		<hr ng-if="$index<bindTo.order.length-1"/>
+</div>
+
+<!-- if doesn't have order-->
+<div ng-if="!(bindTo.order && bindTo.order.length>0)">
+		<div ng-repeat="balance in bindTo.balance" ng-if="bindTo.balance && bindTo.balance.length>0">
+			<div class="row" ng-if="balance.currency == params.defaultCurrency"> 
+				<div class="col col-center" id="balanceLabel">
+					<h4 ng-if="balance.displayName" ng-style="commonText"> {{::balance.displayName}} </h4>
+					<h4 ng-if="!balance.displayName" ng-style="commonText"> {{'current_balance' | translate}} </h4>
+				</div>
+				<h4 class="text-right col col-center amount" ng-style="accountAmount"> 
+					<span ng-style="accountAmount">{{::balance.displayAmount | limitTo : 2}}.</span>
+					{{::balance.displayAmount | limitTo : 42 : 3}}
+				</h4>
+			</div>
+		</div>
+		<hr ng-if="bindTo.available && bindTo.available.length>0"/>
+		<div ng-repeat="available in bindTo.available" ng-if="bindTo.available && bindTo.available.length>0">
+			<div class="row" ng-if="available.currency == params.defaultCurrency"> 
+				<div class="col col-center" id="balanceLabel">
+					<h4 ng-if="available.displayName" ng-style="commonText"> {{::available.displayName}} </h4>
+					<h4 ng-if="!available.displayName" ng-style="commonText"> {{'available_balance' | translate}} </h4>
+				</div>
+				<h4 class="col col-center amount text-right" ng-style="accountAmount">
+					<span ng-style="accountAmount">{{::available.displayAmount | limitTo : 2}}.</span>
+					{{::available.displayAmount | limitTo : 42 : 3}}
+				</h4>
+			</div>
+		</div>
+		<hr ng-if="bindTo.extraProperties && bindTo.extraProperties.length>0"/>
+		<div ng-repeat="extra in bindTo.extraProperties">
+			<div class="row" ng-if="extra.propertyType=='balance' || extra.propertyType == 'date' || extra.propertyType == 'string'"> 
+				<div class="col col-center" id="balanceLabel">
+					<h4 ng-if="extra.propertyType=='balance'" ng-style="commonText"> {{::extra.balanceValue[0].displayName}} </h4>
+					<h4 ng-if="extra.propertyType=='string' || extra.propertyType=='date'" ng-style="commonText">{{::extra.displayName}}</h4>
+				</div>
+				<h4 class="col col-center amount text-right" ng-if="extra.propertyType=='balance'" ng-style="accountAmount">
+				 	<span ng-style="accountAmount">{{::extra.balanceValue[0].displayAmount | limitTo : 2}}.</span>
+					{{::extra.balanceValue[0].displayAmount | limitTo : 42 : 3}}
+				</h4>
+				<h4 class="col col-center amount text-right" ng-if="extra.propertyType == 'date'" ng-style="accountAmount"> 
+					{{::extra.stringValue | date:"dd/MM/yyyy"}} 
+				</h4>
+				<h4 class="col col-center amount text-right" ng-if="extra.propertyType == 'string'" ng-style="accountAmount"> 
+					{{::extra.stringValue}} 
+				</h4>
+			</div>	
+			<hr ng-if="$index<bindTo.extraProperties.length-1"/>
+		</div>
+</div>

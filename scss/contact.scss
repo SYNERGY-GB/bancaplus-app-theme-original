@@ -1,0 +1,40 @@
+.dashboard .contact {
+
+	div#social { 
+		p {
+			line-height:40px; 
+		}
+	}
+
+	.secondaryContainer .item {
+		border-radius: 0; 
+	}
+
+	mz-template:last-child .item {
+		border-bottom-left-radius: $container-round-corner; 
+		border-bottom-right-radius: $container-round-corner;
+	}
+
+	.item {
+		&.activated:not(.disableActivated) {
+			background-color:#0F90D6; 
+			h2, p {
+				color:white; 
+			}
+		}
+
+		border: 0; 
+		p {
+			//color: $contact-font-color; 
+		}
+		h2 {
+			font-weight: bold;
+			color: $contact-title-color;
+		}
+	}
+
+	.social a.item {
+		display: flex;
+    align-items: center;
+	}
+}

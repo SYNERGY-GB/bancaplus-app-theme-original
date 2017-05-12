@@ -1,0 +1,40 @@
+.dashboard .tutorial.pane {
+	background: $tutorial-pane-background-color;
+}
+
+/* iPhone 4 / iPhone 4S */
+@media only screen 
+	and (device-width : 320px)
+	and (device-height : 480px) { 
+	.dashboard .tutorial {
+		.fullscreen-image {
+			height: 85vh !important;
+		}
+	}
+}
+
+/* iPhone 5 / iPhone 5S */
+@media only screen 
+	and (device-width : 320px)
+	and (device-height : 568px) { 
+	.dashboard .tutorial {
+		.fullscreen-image {
+			height: 88vh !important;
+		}
+	}
+}
+
+.dashboard .tutorial {
+
+	.fullscreen-image {
+		height: 90vh;
+	}
+
+	ion-slide {
+		text-align: center;
+	}
+
+	.slider .slider-pager .icon {
+    	color: $tutorial-pager-icon-color;
+	}
+}

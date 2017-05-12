@@ -1,0 +1,40 @@
+.appMenu .approvalsDetail, .appMenu .p2pPaymentDetail {
+
+	h4 {
+    	font-size: 18px;
+	}
+
+	.secondaryContainer {
+		p {
+			padding: 0 12px; 
+			margin-bottom:2px; 
+		}
+		p:first-child {
+			padding-top:10px; 
+			margin-top:0; 
+		}
+		p:last-child {
+			padding-bottom:10px; 
+		}
+	}
+
+	.mainContainer + .row {
+		margin-top:15px; 
+	} 
+
+	.row-button {
+		padding: 12px;
+	}
+
+	.lef-button, .center-button {
+		margin-left: 0;
+	}
+
+	.right-button, .center-button {
+		margin-right: 0;
+	}
+
+	button.app-input {
+    	min-width: initial;
+	}
+}

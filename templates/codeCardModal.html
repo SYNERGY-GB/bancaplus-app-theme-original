@@ -1,0 +1,29 @@
+<ion-modal-view class="mechanism" id="codeCardModal">
+	<div class="mainContainer">
+		<h3 class="sectionTitle">{{'coordinates' | translate}}</h3>
+		<div class="secondaryContainer">
+			<p class="text-center padding" ng-style="commonText">{{'code_card_instruction' | translate}}</p> 
+			<div class="row" id="inputs"  ng-show="mechanismInfo.coordinates[0]">
+				<input type="tel" class="col col-center" 
+					   ng-model="codeCardInput['firstCoordinate']" name="firstCoordinate" required/> 
+				<p class="col col-center" ng-style="commonText"> {{mechanismInfo.coordinates[0]}} </p>
+			</div>
+			<div class="row" id="inputs" ng-show="mechanismInfo.coordinates[1]" >
+				<input type="tel" class="col col-center" 
+				       ng-model="codeCardInput['secondCoordinate']" name="secondCoordinate" required/>
+				<p class="col col-center" ng-style="commonText"> {{mechanismInfo.coordinates[1]}} </p>
+			</div>
+			<div class="row">
+				<button class="col button app-input" data-ng-click="cancelAuth()"> 
+		        	{{'cancel' | translate}}
+		    	</button>
+		    	<button class="col button app-input" 
+		    			data-ng-click="attemptMechanism('codeCard')"
+		    			ng-disabled="!codeCardInput['firstCoordinate'] ||
+		    						 (mechanismInfo.coordinates[1] && !codeCardInput['secondCoordinate'])"> 
+		        	{{'accept' | translate}}
+		    	</button>
+		    </div>
+		</div>
+	</div>
+</ion-modal-view> 

@@ -1,0 +1,40 @@
+.dashboard .location {
+	#map {
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.scroll {
+		height:100%;  
+	}
+
+	.row {
+		&:first-child {
+			.col:first-child {
+				padding: 5px 0 0 0; 
+			}
+			.col:nth-child(2) {
+				font-size: 16px; 
+				padding-top: 6px; 
+				padding-right:0; 
+			}
+			.col:nth-child(3) {
+				margin-right:2px; 
+			}
+			.col:last-child{
+				margin-left:2px; 
+			}
+
+			padding:0; 
+			.icon {
+				font-size:30px; 
+			}
+		}
+		padding: 10px 0;
+	}
+
+	.icon {
+		position: relative;
+    	top: 2px;
+	}
+}
